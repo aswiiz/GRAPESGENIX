@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GrapesGenix Technical Solutions Pvt Ltd - Kerala's leading IT training, internships, and software development hub. Master Python, MERN Stack, Flutter, IoC, AI/ML in Thrissur." />
+  <meta name="keywords" content="GrapesGenix, IT Training, Software Development, Internships Thrissur, Industry on Campus, MERN Stack, Python Django, Flutter Development, Academic Projects, Thrissur Kerala" />
+  <title>GrapesGenix Technical Solutions | Transforming Ideas Into Technology</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- CSS Library CDNs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgress"></div>
+
+  <!-- WhatsApp Floating Action -->
+  <a href="https://wa.me/919744112113?text=Hi%20GrapesGenix%2C%20I%20am%20interested%20in%20your%20programs." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back To Top Button -->
+  <button id="backToTop" title="Scroll To Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ========================================================================
+     GRAPESGENIX CHATBOT WIDGET
+     ======================================================================== -->
+  <div id="gg-chatbot" aria-label="GrapesGenix FAQ Chatbot" role="complementary">
+
+    <!-- Toggle Button -->
+    <button id="gg-chat-toggle" class="gg-chat-toggle" title="Chat with GrapesGenix Assistant" aria-label="Open chatbot">
+      <span class="gg-toggle-icon gg-icon-open"><i class="fas fa-comment-dots"></i></span>
+      <span class="gg-toggle-icon gg-icon-close" style="display:none"><i class="fas fa-times"></i></span>
+      <span class="gg-chat-badge" id="gg-chat-badge">1</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="gg-chat-window" class="gg-chat-window" role="dialog" aria-labelledby="gg-chat-title" aria-hidden="true">
+
+      <!-- Header -->
+      <div class="gg-chat-header">
+        <div class="gg-chat-avatar">
+          <span>GG</span>
+          <span class="gg-online-dot"></span>
+        </div>
+        <div class="gg-chat-header-info">
+          <h4 id="gg-chat-title">GrapesGenix Assistant</h4>
+          <p>Always online &amp; ready to help</p>
+        </div>
+        <button class="gg-chat-close-btn" id="gg-chat-close" aria-label="Close chat">
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+
+      <!-- Messages Area -->
+      <div class="gg-chat-messages" id="gg-chat-messages" aria-live="polite" aria-atomic="false">
+        <!-- Messages injected by JS -->
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="gg-quick-actions" id="gg-quick-actions">
+        <p class="gg-quick-label">Quick topics:</p>
+        <div class="gg-quick-btns">
+          <button class="gg-quick-btn" data-query="about">About Us</button>
+          <button class="gg-quick-btn" data-query="services">Services</button>
+          <button class="gg-quick-btn" data-query="internships">Internships</button>
+          <button class="gg-quick-btn" data-query="industry on campus">IoC Program</button>
+          <button class="gg-quick-btn" data-query="products">Products</button>
+          <button class="gg-quick-btn" data-query="contact">Contact</button>
+          <button class="gg-quick-btn" data-query="journey">Company Journey</button>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="gg-chat-input-area">
+        <textarea
+          id="gg-chat-input"
+          class="gg-chat-input"
+          placeholder="Ask me anything about GrapesGenix…"
+          rows="1"
+          maxlength="300"
+          aria-label="Type your question"
+        ></textarea>
+        <button id="gg-chat-send" class="gg-chat-send-btn" aria-label="Send message" title="Send">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <div class="gg-chat-footer">
+        <span><i class="fas fa-shield-alt"></i> Powered by GrapesGenix Knowledge Base</span>
+      </div>
+
+    </div>
+  </div>
+  <!-- END CHATBOT WIDGET -->
+
+  <!-- ==========================================================================
+     1. STICKY NAVIGATION BAR
+     ========================================================================== -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">GG</span>
+        <span class="logo-text">Grapes<strong>Genix</strong></span>
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active-link">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#placements">Placements</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#timeline">Journey</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn-nav ripple">Enroll Now</a></li>
+      </ul>
+      
+      <div class="nav-right-controls">
+        <button id="darkToggle" title="Toggle Dark/Light Mode" aria-label="Toggle Theme Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu Navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+     2. HERO SECTION
+     ========================================================================== -->
+  <section id="home" class="hero">
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <canvas id="heroCanvas"></canvas>
+    
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge" data-aos="fade-down" data-aos-duration="1000">
+            <i class="fas fa-rocket"></i> Launch Your Career With Industry Leaders
+          </div>
+          <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Launch Your <span class="gradient-text">Tech Career</span> With Industry Experts
+          </h1>
+          <p class="hero-sub" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            Transforming ideas into technology. Join GrapesGenix Technical Solutions for premium training, internships, software development, and academic project support. Learn by building real-world products.
+          </p>
+          <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <a href="#courses" class="btn-primary ripple">Explore Courses <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+            <a href="#contact" class="btn-outline ripple">Apply Now</a>
+          </div>
+        </div> 
+        
+        <div class="hero-visual" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
+          <div class="hero-img-box">
+            <!-- Glassmorphism interactive cards inside Hero visual representation -->
+            <div class="hero-tech-card card-1">
+              <i class="fas fa-code"></i>
+              <div>
+                <strong>MERN Fullstack</strong>
+                <span>React, Node, Express</span>
+              </div>
+            </div>
+            <div class="hero-tech-card card-2">
+              <i class="fas fa-mobile-alt"></i>
+              <div>
+                <strong>Flutter Apps</strong>
+                <span>iOS & Android</span>
+              </div>
+            </div>
+            <div class="hero-tech-card card-3">
+              <i class="fas fa-microchip"></i>
+              <div>
+                <strong>Industry on Campus</strong>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+         3. STATISTICS STRIP
+         ========================================================================== -->
+      <div class="stats-strip" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+        <div class="stats-grid">
+          <div class="stat-item" data-target="521">
+            <div class="stat-num counter">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item" data-target="1000">
+            <div class="stat-num counter">0</div>
+            <div class="stat-label">Students Trained</div>
+          </div>
+          <div class="stat-item" data-target="50">
+            <div class="stat-num counter">0</div>
+            <div class="stat-label">Developers</div>
+          </div>
+          <div class="stat-item" data-target="2015">
+            <div class="stat-num counter">0</div>
+            <div class="stat-label">Since Year</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+    Our Affiliations
+ 
+     ========================================================================== -->
+     <section class="affiliations-section">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="section-tag">Recognized & Trusted</span>
+      <h2>Our <span class="gradient-text">Affiliations</span></h2>
+      <p>Recognized by leading government and industry organizations.</p>
+    </div>
+
+    <div class="logo-slider">
+
+      <div class="logo-track">
+
+        <!-- First Set -->
+        <div class="logo-item">
+          <img src="images/mca.png" alt="MCA">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/msme.png" alt="MSME">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/iso.png" alt="ISO">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/ctech.png" alt="CTECH">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/sted.png" alt="STED">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/bss.png" alt="BSS">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/startup.png" alt="Startup India">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/ksum.png" alt="KSUM">
+        </div>
+
+        <!-- Duplicate for Infinite Loop -->
+
+        <div class="logo-item">
+          <img src="images/mca.png" alt="MCA">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/msme.png" alt="MSME">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/iso.png" alt="ISO">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/ctech.png" alt="CTECH">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/sted.png" alt="STED">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/bss.png" alt="BSS">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/startupindia.png" alt="Startup India">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/ksum.png" alt="KSUM">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  <!-- ==========================================================================
+     4. ABOUT GRAPESGENIX
+     ========================================================================== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual" data-aos="fade-right" data-aos-duration="1000">
+          <div class="about-img-frame">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="GrapesGenix Team Training" loading="lazy" />
+          </div>
+          <div class="about-exp-tag">
+            <strong>10+</strong>
+            <span>Years of Tech Excellence</span>
+          </div>
+        </div>
+        
+        <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
+          <span class="section-tag">About GrapesGenix</span>
+          <h2>Get Trained by the Experts Who Do It Best</h2>
+          <p class="about-desc">
+            Founded in 2015, GrapesGenix Technical Solutions Pvt Ltd has emerged as a premier technology solution provider and IT training institute in Kerala. We specialize in enterprise software development, mobile application builds, web engineering, Industry on Campus initiatives, and academic training courses.
+          </p>
+          <p class="about-desc-secondary">
+            Our mission is to bridge the gap between academic theory and active industrial engineering. Through our hands-on mentorship, students build production-level software under the guidance of active developers, making them highly competitive in the modern recruitment market.
+          </p>
+          
+          <div class="mission-vision-tabs">
+            <div class="tab-box">
+              <h4><i class="fas fa-eye"></i> Our Vision</h4>
+              <p>To cultivate the next generation of engineers, empowering them with the skills to turn innovative ideas into active technologies.</p>
+            </div>
+            <div class="tab-box">
+              <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
+              <p>Providing high-quality software services and practical training systems that yield job placement readiness.</p>
+            </div>
+          </div>
+
+          <div class="certifications-list">
+            <div class="cert-badge"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified</div>
+            <div class="cert-badge"><i class="fas fa-award"></i> Startup India Recognized</div>
+            <div class="cert-badge"><i class="fas fa-university"></i> STED Approved</div>
+            <div class="cert-badge"><i class="fas fa-shield-alt"></i> SITTTR Affiliated</div>
+            <div class="cert-badge"><i class="fas fa-building"></i> MSME Registered</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     5. SERVICES SECTION
+     ========================================================================== -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-tag">What We Do</span>
+        <h2>Comprehensive Tech Solutions</h2>
+        <p>From modern software development and cloud engineering to professional academic mentoring systems.</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3> Mobile App Development</h3>
+          <p>We create mobile apps with exceptional interface design and flawless features for both iOS and Android platforms.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Web Design & Development</h3>
+          <p>We cater to the web design needs of individuals, businesses small and large, and organizations geared towards any purpose.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-globe"></i></div>
+          <h3>Internship Programs</h3>
+          <p>We conduct a variety of Internship programs in all Software/Hardware technologies varying from 3 to 6 months.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3>Maintenance Contracts</h3>
+          <p>We have a strong Hardware & Networking team with extensive experience for carrying out maintenance contracts.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-microchip"></i></div>
+          <h3>Industry on Campus</h3>
+          <p>The Industry on Campus (IoC) initiative bridges the gap between academics and industry by providing students with real-world work exposure while they are still pursuing their studies. It equips students with practical knowledge, boosts employability, and nurtures innovation and entrepreneurial skills. Through IoC, students can actively contribute to live projects, gain hands-on experience, and become industry-ready professionals by the time they graduate.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Academic Projects</h3>
+          <p>Comprehensive support for B.Tech, MCA, and Diploma students. We guide project compilation, system designs, and code reviews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     6. POPULAR COURSES SECTION
+     ========================================================================== -->
+  <section id="courses" class="courses-section">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-tag">Boost Your Skills</span>
+        <h2>Popular Corporate Courses</h2>
+        <p>Acquire career skills curated by industry experts. Find your path, master the technology, and claim your place in the IT workspace.</p>
+      </div>
+
+      <div class="course-controls" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="course-search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" id="courseSearch" placeholder="Search courses (e.g. Python, MERN, Flutter)..." />
+        </div>
+        <div class="course-filters">
+          <button class="filter-btn active" data-filter="all">All Courses</button>
+          <button class="filter-btn" data-filter="programming">Web & Development</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="advanced">Data Science & AI</button>
+          <button class="filter-btn" data-filter="hardware">Industry on Campus</button>
+        </div>
+      </div>
+
+      <div class="courses-grid" id="coursesGrid">
+        
+        <!-- Python & Django -->
+        <div class="course-card" data-category="programming" data-aos="fade-up" data-aos-duration="1000">
+          <div class="course-img-box">
+            <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=500&q=80" alt="Python & Django Course" loading="lazy" />
+            <div class="course-img-overlay"></div>
+            <span class="course-badge-tag">Popular</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-category">Web Development</span>
+            <h3>Python & Django Full Stack</h3>
+            <p>Master Python fundamentals, database design, REST APIs, and Django application architecture. Build robust backends.</p>
+            <div class="course-details-strip">
+              <span><i class="fas fa-calendar-alt"></i> 3 Months</span>
+              <span><i class="fas fa-certificate"></i> Certification</span>
+            </div>
+            <a href="#contact" class="btn-card ripple">Apply Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+
+        <!-- MERN Stack -->
+        <div class="course-card" data-category="programming" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="course-img-box">
+            <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=500&q=80" alt="MERN Stack Course" loading="lazy" />
+            <div class="course-img-overlay"></div>
+            <span class="course-badge-tag">Trending</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-category">Full Stack</span>
+            <h3>MERN Stack Development</h3>
+            <p>Engineer complex websites using MongoDB, Express.js, React.js, and Node.js. Build interactive dashboards & user portals.</p>
+            <div class="course-details-strip">
+              <span><i class="fas fa-calendar-alt"></i> 4 Months</span>
+              <span><i class="fas fa-certificate"></i> Certification</span>
+            </div>
+            <a href="#contact" class="btn-card ripple">Apply Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+
+        <!-- Flutter App Dev -->
+        <div class="course-card" data-category="mobile" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="course-img-box">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&q=80" alt="Flutter Mobile App Course" loading="lazy" />
+            <div class="course-img-overlay"></div>
+            <span class="course-badge-tag">High placement</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-category">Mobile Development</span>
+            <h3>Flutter Mobile App</h3>
+            <p>Program native-performing iOS and Android apps with Dart and Flutter. Learn state management and animations.</p>
+            <div class="course-details-strip">
+              <span><i class="fas fa-calendar-alt"></i> 3 Months</span>
+              <span><i class="fas fa-certificate"></i> Certification</span>
+            </div>
+            <a href="#contact" class="btn-card ripple">Apply Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+
+        <!-- AI & ML -->
+        <div class="course-card" data-category="advanced" data-aos="fade-up" data-aos-duration="1000">
+          <div class="course-img-box">
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=500&q=80" alt="AI & ML Course" loading="lazy" />
+            <div class="course-img-overlay"></div>
+            <span class="course-badge-tag">Future Tech</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-category">Data Science</span>
+            <h3>AI & Machine Learning</h3>
+            <p>Dive into artificial neural networks, supervised models, image classifiers, and predictive analytics structures.</p>
+            <div class="course-details-strip">
+              <span><i class="fas fa-calendar-alt"></i> 4 Months</span>
+              <span><i class="fas fa-certificate"></i> Certification</span>
+            </div>
+            <a href="#contact" class="btn-card ripple">Apply Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+
+        <!-- Data Science -->
+        <div class="course-card" data-category="advanced" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="course-img-box">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" alt="Data Science Course" loading="lazy" />
+            <div class="course-img-overlay"></div>
+            <span class="course-badge-tag">High Demand</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-category">Data Science</span>
+            <h3>Data Science & Analytics</h3>
+            <p>Learn data cleaning, data profiling, advanced statistical plotting, NumPy, Pandas, and analytical dashboards.</p>
+            <div class="course-details-strip">
+              <span><i class="fas fa-calendar-alt"></i> 3 Months</span>
+              <span><i class="fas fa-certificate"></i> Certification</span>
+            </div>
+            <a href="#contact" class="btn-card ripple">Apply Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+
+        <!-- Industry on Campus -->
+        <div class="course-card" data-category="hardware" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="course-img-box">
+            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=500&q=80" alt="IoC Course" loading="lazy" />
+            <div class="course-img-overlay"></div>
+            <span class="course-badge-tag">Practical</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-category">IoC Solutions</span>
+            <h3>Industry on Campus</h3>
+            <p>The Industry on Campus (IoC) initiative bridges the gap between academics and industry by providing students with real-world work exposure while they are still pursuing their studies. It equips students with practical knowledge, boosts employability, and nurtures innovation and entrepreneurial skills. Through IoC, students can actively contribute to live projects, gain hands-on experience, and become industry-ready professionals by the time they graduate.</p>
+            <div class="course-details-strip">
+              <span><i class="fas fa-calendar-alt"></i> 3 Months</span>
+              <span><i class="fas fa-certificate"></i> Certification</span>
+            </div>
+            <a href="#contact" class="btn-card ripple">Apply Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+
+        
+
+        <!-- Java Full Stack -->
+        <div class="course-card" data-category="programming" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="course-img-box">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&q=80" alt="Java Full Stack Course" loading="lazy" />
+            <div class="course-img-overlay"></div>
+            <span class="course-badge-tag">Corporate</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-category">Full Stack</span>
+            <h3>Java Full Stack Development</h3>
+            <p>Master OOP, Java fundamentals, Spring Boot framework, JPA Hibernate, and RESTful web microservices.</p>
+            <div class="course-details-strip">
+              <span><i class="fas fa-calendar-alt"></i> 4 Months</span>
+              <span><i class="fas fa-certificate"></i> Certification</span>
+            </div>
+            <a href="#contact" class="btn-card ripple">Apply Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+
+        
+
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     8. INTERNSHIP PROGRAMS & INDUSTRY ON CAMPUS (IOC)
+     ========================================================================== -->
+  <section id="internships" class="internship-section">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-tag">Real World Exposure</span>
+        <h2>IT Internship Programs</h2>
+        <p>Equip yourself with practical credentials through our structured internship pathways offering stipend incentives.</p>
+      </div>
+
+      <div class="internship-grid">
+        
+        <div class="intern-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="intern-icon-box"><i class="fas fa-laptop-code"></i></div>
+          <h3>Software Development</h3>
+          <p>Gain exposure to high-level databases, microservice models, and software builds. Master Python and React.js.</p>
+          <ul class="intern-benefits-list">
+            <li><i class="fas fa-check-circle"></i> Work on active client projects</li>
+            <li><i class="fas fa-check-circle"></i> Stipend based on performance milestones</li>
+            <li><i class="fas fa-check-circle"></i> Full documentation & experience certificates</li>
+          </ul>
+          <a href="#contact" class="btn-primary ripple">Apply Now</a>
+        </div>
+
+        <div class="intern-card featured" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <span class="intern-featured-badge">Flagship Scheme</span>
+          <div class="intern-icon-box" style="background: rgba(236,72,153,0.08); color: var(--accent);"><i class="fas fa-university"></i></div>
+          <h3>Industry on Campus (IoC)</h3>
+          <p>Our unique program places active software development production hubs directly inside college institutions.</p>
+          <ul class="intern-benefits-list">
+            <li><i class="fas fa-check-circle"></i> Complete internship tasks during off-study hours</li>
+            <li><i class="fas fa-check-circle"></i> Mentorship from active senior developers</li>
+            <li><i class="fas fa-check-circle"></i> Guaranteed stipend payouts</li>
+          </ul>
+          <a href="#contact" class="btn-primary ripple">Learn More</a>
+        </div>
+
+        <div class="intern-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <div class="intern-icon-box"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile App Development</h3>
+          <p>Participate in scripting cross-platform mobile user portals, telemetry uploads, and offline support mechanisms.</p>
+          <ul class="intern-benefits-list">
+            <li><i class="fas fa-check-circle"></i> Build custom mobile codebases</li>
+            <li><i class="fas fa-check-circle"></i> Google Play & Apple App store publish</li>
+            <li><i class="fas fa-check-circle"></i> Mentoring by senior mobile devs</li>
+          </ul>
+          <a href="#contact" class="btn-primary ripple">Apply Now</a>
+        </div>
+
+        <div class="intern-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="intern-icon-box"><i class="fas fa-brain"></i></div>
+          <h3>AI Engineering</h3>
+          <p>Train deep learning models, integrate custom APIs, and build intelligent algorithms for plant, image, or text recognition.</p>
+          <ul class="intern-benefits-list">
+            <li><i class="fas fa-check-circle"></i> Implement ML models on clean datasets</li>
+            <li><i class="fas fa-check-circle"></i> Deploy AI modules onto cloud networks</li>
+            <li><i class="fas fa-check-circle"></i> Mentoring by data scientists</li>
+          </ul>
+          <a href="#contact" class="btn-primary ripple">Apply Now</a>
+        </div>
+
+        <div class="intern-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="intern-icon-box"><i class="fas fa-microchip"></i></div>
+          <h3>IoC & Smart Hardware</h3>
+          <p>Assemble functional controllers, write embedded firmware protocols, and develop smart solutions for remote device telemetry.</p>
+          <ul class="intern-benefits-list">
+            <li><i class="fas fa-check-circle"></i> Interface sensors with cloud brokers</li>
+            <li><i class="fas fa-check-circle"></i> Build smart power and telemetry boards</li>
+            <li><i class="fas fa-check-circle"></i> Work in hardware lab environments</li>
+          </ul>
+          <a href="#contact" class="btn-primary ripple">Apply Now</a>
+        </div>
+
+        <div class="intern-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <div class="intern-icon-box" style="background: rgba(34,197,94,0.08); color: #22c55e;"><i class="fas fa-hand-holding-usd"></i></div>
+          <h3>Earn While Learn Scheme</h3>
+          <p>Our student support setup allows students to pursue coursework while delivering coding tasks, generating active stipends.</p>
+          <ul class="intern-benefits-list">
+            <li><i class="fas fa-check-circle"></i> Flexible work allocation profiles</li>
+            <li><i class="fas fa-check-circle"></i> Compensations aligned to completed files</li>
+            <li><i class="fas fa-check-circle"></i> Retain full academic scheduling freedom</li>
+          </ul>
+          <a href="#contact" class="btn-primary ripple">Apply Now</a>
+        </div>
+
+      </div>
+
+      <!-- IoC Campus list -->
+      <div class="ioc-container" data-aos="fade-up" data-aos-duration="1000">
+        <h3>Active Industry on Campus (IoC) Collaborations</h3>
+        <div class="college-grid">
+          <div class="college-card">
+            <i class="fas fa-university"></i>
+            <h4>Model Polytechnic College</h4>
+            <span>Kalletumkara, Thrissur</span>
+          </div>
+          <div class="college-card">
+            <i class="fas fa-university"></i>
+            <h4>Model Polytechnic College</h4>
+            <span>Karunagappally, Kollam</span>
+          </div>
+          <div class="college-card">
+            <i class="fas fa-university"></i>
+            <h4>Women's Polytechnic College</h4>
+            <span>Nedupuzha, Thrissur</span>
+          </div>
+          <div class="college-card">
+            <i class="fas fa-university"></i>
+            <h4>Presentation College of Arts</h4>
+            <span>Ernakulam</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     9. SOFTWARE SOLUTIONS & PROJECTS (PORTFOLIO)
+     ========================================================================== -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-tag">Case Studies</span>
+        <h2>Software Solutions & Deployed Projects</h2>
+        <p>Take a look at some of the industry products and software systems built and managed by our team.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        
+        <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="portfolio-img-box">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="Hospital Queue Management System" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="#contact" class="btn-outline" style="color: white; border-color: white;">Inquire Details</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Healthcare</span>
+            <h3>Hospital Queue Management</h3>
+            <p>Smart real-time clinic queuing nodes connected to telemetry displays to limit patient wait times.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="portfolio-img-box">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600&q=80" alt="Library Management Application" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="#contact" class="btn-outline" style="color: white; border-color: white;">Inquire Details</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Education</span>
+            <h3>Library Management Application</h3>
+            <p>Book check-out controls, database logs, and automated overdue alert triggers deployed for schools.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <div class="portfolio-img-box">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80" alt="Bus Reservation System" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="#contact" class="btn-outline" style="color: white; border-color: white;">Inquire Details</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Transport</span>
+            <h3>Bus Reservation with QR</h3>
+            <p>Ticket booking web dashboard featuring live seat selections and QR validator apps.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="portfolio-img-box">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80" alt="AI Plant Disease Detection" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="#contact" class="btn-outline" style="color: white; border-color: white;">Inquire Details</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">AgriTech</span>
+            <h3>AI Plant Disease Detection</h3>
+            <p>Computer vision model classifying agricultural leaf images to diagnose crop diseases.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="portfolio-img-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvrS8TX0cezSPaeEn68L-fgi89d5FV_pWf7Q&s" alt="College Management System" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="#contact" class="btn-outline" style="color: white; border-color: white;">Inquire Details</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Education</span>
+            <h3>College Management System</h3>
+            <p>Student information database, fee payment flows, and automated mark sheet generators.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <div class="portfolio-img-box">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Enterprise Resource Planning Solutions" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="#contact" class="btn-outline" style="color: white; border-color: white;">Inquire Details</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Enterprise</span>
+            <h3>ERP Software Solutions</h3>
+            <p>Comprehensive dashboard managing inventories, payroll, logistics logging, and accounting ledgers.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     10. PLACEMENT SECTION
+     ========================================================================== -->
+  <section id="placements" class="placements-section">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-tag">Career Milestones</span>
+        <h2>Successful Placement Statistics</h2>
+        <p>We train you for employment. Check out our career placement progress and corporate hiring partners.</p>
+      </div>
+
+      <!-- Placement Stats strip -->
+      <div class="placement-stats-box" data-aos="fade-up" data-aos-duration="1000">
+        <div class="p-stat">
+          <h3 class="counter" data-target="96">0</h3>
+          <p>Placement Percentage</p>
+        </div>
+        <div class="p-stat">
+          <h3 class="counter" data-target="250">0</h3>
+          <p>Hiring Partners</p>
+        </div>
+        <div class="p-stat">
+          <h3 class="counter" data-target="15">0</h3>
+          <p>Max Package Offered (LPA)</p>
+        </div>
+      </div>
+
+      <!-- Placement Process flow -->
+      <div class="placement-process" data-aos="fade-up" data-aos-duration="1000">
+        <h3>Our 4-Step Placement Pipeline</h3>
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <i class="fas fa-book-open"></i>
+            <h4>Concept Mastery</h4>
+            <p>Complete your selected course modules and build active portfolio projects.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <i class="fas fa-file-invoice"></i>
+            <h4>Resume Workshop</h4>
+            <p>Refine your developer CV, construct clean GitHub pages, and optimize LinkedIn handles.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <i class="fas fa-comments"></i>
+            <h4>Mock Interviews</h4>
+            <p>Face code challenges, systems design tests, and HR screening simulations.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <i class="fas fa-briefcase"></i>
+            <h4>Active Recruitment</h4>
+            <p>Participate in dedicated campus drives, get direct referrals, and lock job offers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infinite Logo Carousel -->
+      <div class="partners-box" data-aos="fade-up" data-aos-duration="1000">
+        <h3>Our Trainees Are Hired By</h3>
+        <div class="logo-carousel-wrap">
+          <div class="logo-track">
+            <!-- 6 original partners + duplicates for infinite loop -->
+            <div class="partner-logo-item">TCS</div>
+            <div class="partner-logo-item">Infosys</div>
+            <div class="partner-logo-item">UST Global</div>
+            <div class="partner-logo-item">Wipro</div>
+            <div class="partner-logo-item">Accenture</div>
+            <div class="partner-logo-item">Cognizant</div>
+            <!-- Duplicates -->
+            <div class="partner-logo-item">TCS</div>
+            <div class="partner-logo-item">Infosys</div>
+            <div class="partner-logo-item">UST Global</div>
+            <div class="partner-logo-item">Wipro</div>
+            <div class="partner-logo-item">Accenture</div>
+            <div class="partner-logo-item">Cognizant</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================
+ GOOGLE REVIEWS SECTION
+========================= -->
+<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-65428631-5881-4b02-8198-b961ed87ff0d" data-elfsight-app-lazy></div>
+  <!-- ==========================================================================
+     12. TEAM SECTION (FOUNDER SPOTLIGHT & DEV GRID)
+     ========================================================================== -->
+  <section id="team" class="section team-section">
+
+    <div class="container">
+
+        <div class="section-head" data-aos="fade-up">
+            <span class="section-tag">Our Experts</span>
+            <h2>Meet Our <span class="gradient-text">Team</span></h2>
+            <p>Experienced professionals committed to innovation, quality, and student success.</p>
+        </div>
+
+        <div class="team-grid">
+
+            <!-- CEO -->
+            <div class="team-card" data-aos="fade-up">
+                <img src="images/team/gopikrishnan.jpg" alt="Gopikrishnan P G">
+                <h3>Gopikrishnan P G</h3>
+                <p>CEO, Senior Software Developer</p>
+            </div>
+
+            <!-- Managing Director -->
+            <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/team/aparna.jpg" alt="Aparna P K">
+                <h3>Aparna P K</h3>
+                <p>Managing Director, Senior Developer</p>
+            </div>
+
+            <!-- Managing Director -->
+            <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/team/rangaraj.jpg" alt="Rangaraj T R">
+                <h3>Rangaraj T R</h3>
+                <p>Managing Director, Senior IT Consultant</p>
+            </div>
+
+            <!-- Senior Mobile App Developer -->
+            <div class="team-card" data-aos="fade-up">
+                <img src="images/team/gopika.jpg" alt="Gopika Suveesh">
+                <h3>Gopika Suveesh</h3>
+                <p>Senior Mobile App Developer</p>
+            </div>
+
+            <!-- Senior FullStack -->
+            <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/team/bincy.jpg" alt="Bincy Rahul">
+                <h3>Bincy Rahul</h3>
+                <p>Senior FullStack Developer</p>
+            </div>
+
+            <!-- Senior FullStack -->
+            <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/team/nivia.jpg" alt="Nivia K S">
+                <h3>Nivia K S</h3>
+                <p>Senior FullStack Developer</p>
+            </div>
+
+            <!-- FullStack -->
+            <div class="team-card" data-aos="fade-up">
+                <img src="images/team/praveena.jpg" alt="Praveena V P">
+                <h3>Praveena V P</h3>
+                <p>FullStack Developer</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+  <!-- ==========================================================================
+     13. COMPANY JOURNEY TIMELINE
+     ========================================================================== -->
+  <section id="timeline" class="timeline-section">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-tag">Since 2015</span>
+        <h2>Our Corporate Journey</h2>
+        <p>Tracing our history from a modest technology consulting workshop to a recognized multi-wing IT training and solution hub.</p>
+      </div>
+
+      <div class="timeline-container">
+        
+        <div class="timeline-item left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2015</span>
+            <h3>The Initial Workshop</h3>
+            <p>Started operations as a specialized web systems and telemetry development lab in Thrissur, catering to regional businesses.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left" data-aos-duration="1000">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2017</span>
+            <h3>ISO Certification & Expansion</h3>
+            <p>Achieved ISO 9001:2015 certification for quality services and expanded the dev team to support native mobile application requests.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2020</span>
+            <h3>Pvt Ltd & Startup Recognitions</h3>
+            <p>Incorporated as a Private Limited Company. Recognized by Startup India and Kerala Startup Mission (KSUM) as an active technology developer.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left" data-aos-duration="1000">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022</span>
+            <h3>IoC Scheme Launch</h3>
+            <p>Initiated the flagship Industry on Campus (IoC) partnership model in Thrissur colleges, installing dev labs directly inside campus facilities.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h3>Academic Affiliations</h3>
+            <p>Gained official affiliations under STED Council and SITTTR. The placed-students counts exceeded 80+ interns in a single session.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left" data-aos-duration="1000">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2026</span>
+            <h3>The Next Chapter</h3>
+            <p>Scaling our dev hubs all over Kerala. Presenting online modules alongside physical coding slots to help more students train.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     14. FAQ SECTION
+     ========================================================================== -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-tag">Common Inquiries</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Get answers to common queries regarding courses, placement channels, and internship guidelines.</p>
+      </div>
+
+      <div class="faq-list-box" data-aos="fade-up" data-aos-duration="1000">
+        
+        <div class="faq-item">
+          <button class="faq-header">
+            What courses does GrapesGenix offer?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-content">
+              We offer comprehensive training in Python & Django Full Stack, MERN Stack Development, Flutter Mobile Development, AI & Machine Learning, Data Science, IoC & Embedded Systems, Java Full Stack, PHP, and UI/UX Design.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            Is there a placement guarantee?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-content">
+              While we do not offer generic 100% false guarantees, we have a dedicated placement cell connected to 250+ active employers. We guide mock interviews, build CVs, and refer students. Over 96% of eligible trainees get placed successfully.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            What is the Industry on Campus (IoC) scheme?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-content">
+              Industry on Campus (IoC) is our signature program in collaboration with the Government/Polytechnic colleges in Kerala. We establish active software production lines inside college campuses, allowing students to deliver real-world project tasks and receive stipends while completing coursework.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            How long are the internship programs?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-content">
+              Our internship cycles range between 3 to 6 months. Interns work directly alongside our development team on actual client modules, ensuring authentic experience references.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            Can I study online or hybrid?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-content">
+              Yes. We offer standard in-person classes at our Thrissur headquarters, alongside hybrid schedules and online mentoring modes for select courses.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     15. SECURE CONTACT FORM & DETAILS
+     ========================================================================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-tag">Join GrapesGenix</span>
+        <h2>Begin Your Engineering Journey</h2>
+        <p>Send an inquiry or drop by our Thrissur facility to discuss details with our technical advisors.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        
+        <div class="contact-info-panel" data-aos="fade-right" data-aos-duration="1000">
+          
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-card-text">
+              <strong>Corporate Address</strong>
+              <p>
+                GrapesGenix Technical Solutions Pvt Ltd,<br />
+                Gate No.71, Parakkott Lane, Patturaikkal,<br />
+                Thrissur - 680020, Kerala, India
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-card-text">
+              <strong>Phone Connections</strong>
+              <p>
+                +91 97441 12113<br />
+                +91 77365 63694
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-card-text">
+              <strong>Support Emails</strong>
+              <p>
+                mail@grapestechs.com<br />
+                info@grapestechs.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Google Map Embed -->
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.3857503798934!2d76.21637777508316!3d10.549247689589712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ef0015555555%3A0xc3f240b90494cf0!2sGrapesGenix%20Technical%20Solutions!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade" 
+              title="GrapesGenix Technical Solutions Google Map Location">
+            </iframe>
+          </div>
+
+        </div>
+
+        <!-- Validate Contact Form -->
+        <div class="contact-form-panel" data-aos="fade-left" data-aos-duration="1000">
+          <form id="contactForm" novalidate>
+            
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" placeholder="Your full name" required />
+              <span class="error-text" id="nameError"></span>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="emailAddress">Email Address *</label>
+                <input type="email" id="emailAddress" placeholder="you@email.com" required />
+                <span class="error-text" id="emailError"></span>
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber">Phone Number *</label>
+                <input type="tel" id="phoneNumber" placeholder="9876543210" required />
+                <span class="error-text" id="phoneError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="interestCourse">Select Program of Interest *</label>
+              <select id="interestCourse" required>
+                <option value="">-- Choose Course / Internship --</option>
+                <option value="python">Python & Django Full Stack</option>
+                <option value="mern">MERN Stack Development</option>
+                <option value="flutter">Flutter Mobile App Dev</option>
+                <option value="aiml">AI & Machine Learning</option>
+                <option value="datascience">Data Science & Analytics</option>
+                <option value="ioC">Industry on Campus (IoC)</option>
+                <option value="java">Java Full Stack Development</option>
+                <option value="uiux">UI/UX Design Masterclass</option>
+                <option value="cyber">Cyber Security & Hacking</option>
+                <option value="internship">General Dev Internship</option>
+                <option value="ioc">Industry on Campus (IoC)</option>
+              </select>
+              <span class="error-text" id="courseError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="userMessage">Message / Goals *</label>
+              <textarea id="userMessage" rows="5" placeholder="Let us know what you want to achieve..." required></textarea>
+              <span class="error-text" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn-primary ripple" style="width: 100%; padding: 16px;">
+              Send Inquiry Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+            </button>
+
+            <div id="formSuccess" class="form-success-box" style="display: none;">
+              <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Message sent successfully! We'll contact you soon.
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     16. FOOTER
+     ========================================================================== -->
+  <footer>
+    <div class="footer-top">
+      <div class="container footer-grid">
+        
+        <div class="footer-brand">
+          <a href="#" class="logo footer-logo">
+            <span class="logo-icon">GG</span>
+            <span class="logo-text" style="color: white;">Grapes<strong>Genix</strong></span>
+          </a>
+          <p>
+            GrapesGenix Technical Solutions Pvt Ltd is a certified tech consulting company and premium EdTech academy established in Thrissur, Kerala.
+          </p>
+          <div class="social-links-box">
+            <a href="https://facebook.com/grapesgenix" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/grapesgenix" target="_blank" rel="noopener noreferrer" aria-label="Instagram Handle"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/company/grapesgenix" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Directory"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/grapesgenix" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#projects">Deployed Projects</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Course Categories</h4>
+          <ul>
+            <li><a href="#courses">Python & Django</a></li>
+            <li><a href="#courses">MERN Web Dev</a></li>
+            <li><a href="#courses">Flutter Mobile Dev</a></li>
+            <li><a href="#courses">AI & ML Modules</a></li>
+            <li><a href="#courses">Industry on Campus</a></li>
+            <li><a href="#courses">UI/UX Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Newsletter Subscribe</h4>
+          <p>Sign up to receive announcements about course schedules, new placements, and internship openings.</p>
+          <div class="newsletter-subscribe-box">
+            <input type="email" id="newsletterEmail" placeholder="your@email.com" required aria-label="Newsletter Email Address" />
+            <button id="newsletterBtn" type="button" aria-label="Submit Newsletter Email">Join</button>
+          </div>
+          <span id="newsletterSuccess" style="display: none; color: #22c55e; font-size: 0.8rem; font-weight: 600;">
+            <i class="fas fa-check"></i> Subscribed successfully!
+          </span>
+
+          <div class="footer-mini-details">
+            <p><i class="fas fa-phone-alt"></i> +91 97441 12113</p>
+            <p><i class="fas fa-envelope"></i> mail@grapestechs.com</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 GrapesGenix Technical Solutions Pvt Ltd. All rights reserved.</p>
+        <p>ISO 9001:2015 Certified | Developed with <i class="fas fa-heart" style="color: var(--accent);"></i> in Thrissur, Kerala</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+     17. SCRIPT LIBRARY CDNS
+     ========================================================================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  
+  <!-- Custom Script Logic -->
+  <script src="main.js"></script>
+
+</body>
+</html>
