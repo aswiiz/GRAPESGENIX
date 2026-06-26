@@ -1423,10 +1423,12 @@
           </div>
 
         </div>
-
+      <!----- -->>
         <!-- Contact Form -->
         <div class="contact-form-panel" data-aos="fade-left" data-aos-duration="1000">
-          <form id="contactForm" action="send-contact.php" method="post" novalidate>
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="post" novalidate>
+            <input type="hidden" name="access_key" value="e76db011-f066-45ee-bbc3-038f266f7f97" />
+            <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off" />
             
             <div class="form-group">
               <label for="fullName">Full Name *</label>
@@ -1450,8 +1452,11 @@
               Send Inquiry Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
             </button>
 
+            <div id="formStatus" class="form-success-box" style="display: none;">
+              <i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i> Sending your message...
+            </div>
             <div id="formSuccess" class="form-success-box" style="display: none;">
-              <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Message sent successfully! We'll contact you soon.
+              <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Message sent successfully.
             </div>
             <div id="formError" class="form-success-box" style="display: none; color: #dc2626;">
               <i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i> <span>Unable to send your message. Please try again.</span>
