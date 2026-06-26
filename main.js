@@ -385,6 +385,7 @@ if (contactForm) {
     const nameInput = document.getElementById('fullName');
     const emailInput = document.getElementById('emailAddress');
     const messageInput = document.getElementById('userMessage');
+    const statusBox = document.getElementById('formStatus');
     const successBox = document.getElementById('formSuccess');
     const errorBox = document.getElementById('formError');
     const submitButton = contactForm.querySelector('button[type="submit"]');
@@ -392,6 +393,7 @@ if (contactForm) {
 
     // Reset error spans
     document.querySelectorAll('.error-text').forEach(err => err.innerText = '');
+    if (statusBox) statusBox.style.display = 'none';
     if (successBox) successBox.style.display = 'none';
     if (errorBox) errorBox.style.display = 'none';
 
@@ -419,7 +421,11 @@ if (contactForm) {
     try {
       if (submitButton) {
         submitButton.disabled = true;
-        submitButton.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin" style="margin-left: 8px;"></i>';
+        submitButton.innerHTML = 'Sending your message... <i class="fas fa-spinner fa-spin" style="margin-left: 8px;"></i>';
+      }
+      if (statusBox) {
+        statusBox.style.display = 'block';
+        statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
 
       const response = await fetch(contactForm.action, {
@@ -434,10 +440,11 @@ if (contactForm) {
         message: 'Unable to send your message right now.',
       }));
 
-      if (!response.ok || !result.success) {
+      if (response.status !== 200) {
         throw new Error(result.message || 'Message could not be sent.');
       }
 
+      if (statusBox) statusBox.style.display = 'none';
       if (successBox) {
         successBox.style.display = 'block';
         successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -448,6 +455,7 @@ if (contactForm) {
         if (successBox) successBox.style.display = 'none';
       }, 5000);
     } catch (error) {
+      if (statusBox) statusBox.style.display = 'none';
       if (errorBox) {
         const messageSpan = errorBox.querySelector('span');
         if (messageSpan) messageSpan.innerText = error.message;
