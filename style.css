@@ -2,6 +2,53 @@
    NOTE: Elfsight content can render inside nested containers/iframes.
    These rules force readability when data-theme="dark" is active.
 */
+/*======================herosection header======================================/*/
+.hero{
+    position:relative;
+    overflow:hidden;
+    min-height:100vh;
+}
+
+.hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-3;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(6,10,25,.70),
+        rgba(6,10,25,.70)
+    ),
+    radial-gradient(
+        circle at center,
+        rgba(132,45,255,.18),
+        rgba(0,0,0,.30)
+    );
+
+    z-index:-2;
+}
+
+.hero-shapes,
+#heroCanvas{
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.container{
+    position:relative;
+    z-index:5;
+}
+
 
 /* Container shell: never disappear */
 .elfsight-app-65428631-5881-4b02-8198-b961ed87ff0d,
