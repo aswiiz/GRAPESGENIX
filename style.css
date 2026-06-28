@@ -2,7 +2,7 @@
    NOTE: Elfsight content can render inside nested containers/iframes.
    These rules force readability when data-theme="dark" is active.
 */
-/*======================herosection header======================================/*/
+
 .hero{
     position:relative;
     overflow:hidden;
@@ -48,7 +48,6 @@
     position:relative;
     z-index:5;
 }
-
 
 /* Container shell: never disappear */
 .elfsight-app-65428631-5881-4b02-8198-b961ed87ff0d,
