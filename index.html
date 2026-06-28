@@ -156,34 +156,57 @@
      2. HERO SECTION
      ========================================================================== -->
   <section id="home" class="hero">
+
+    <!-- Video Background -->
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Existing Background Shapes -->
     <div class="hero-shapes">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
       <div class="shape shape-3"></div>
     </div>
+
+    <!-- Keep if you still want particles -->
     <canvas id="heroCanvas"></canvas>
-    
+
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
           <div class="hero-badge" data-aos="fade-down" data-aos-duration="1000">
             <i class="fas fa-rocket"></i> Launch Your Career With Industry Leaders
           </div>
+
           <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             Launch Your <span class="gradient-text">Tech Career</span> With Industry Experts
           </h1>
+
           <p class="hero-sub" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             Transforming ideas into technology. Join GrapesGenix Technical Solutions for premium training, internships, software development, and academic project support. Learn by building real-world products.
           </p>
+
           <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <a href="#courses" class="btn-primary ripple">Explore Courses <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
-            <a href="#contact" class="btn-outline ripple">Apply Now</a>
+            <a href="#courses" class="btn-primary ripple">
+              Explore Courses
+              <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
+            </a>
+
+            <a href="#form" class="btn-outline ripple">
+              Apply Now
+            </a>
           </div>
-        </div> 
-        
+        </div>
+
         <div class="hero-visual" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
+
           <div class="hero-img-box">
-            <!-- Glassmorphism interactive cards inside Hero visual representation -->
+
             <div class="hero-tech-card card-1">
               <i class="fas fa-code"></i>
               <div>
@@ -191,6 +214,7 @@
                 <span>React, Node, Express</span>
               </div>
             </div>
+
             <div class="hero-tech-card card-2">
               <i class="fas fa-mobile-alt"></i>
               <div>
@@ -198,16 +222,21 @@
                 <span>iOS & Android</span>
               </div>
             </div>
+
             <div class="hero-tech-card card-3">
               <i class="fas fa-microchip"></i>
               <div>
                 <strong>Industry on Campus</strong>
-                <span></span>
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
+    </div>
+
+</section>
 
       <!-- ==========================================================================
          3. STATISTICS STRIP
